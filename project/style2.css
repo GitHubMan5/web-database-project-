@@ -1,0 +1,21 @@
+form {
+    border-style: double;
+    border-width: 2px;
+    border-color: chartreuse;
+    border-radius: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+
+body {
+    background-color: coral;
+    color: darkslategray;
+    font-family: cursive;
+    font-size: 20px;
+}
+
+#margin {
+    border: 5px solid aquamarine;
+    
+    margin: 50px;
+}

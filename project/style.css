@@ -1,0 +1,29 @@
+form {
+    text-align: center;
+    border-style: dotted;
+    border-width: 2px;
+    border-color: aqua;
+    text-shadow: 2px 2px 4px azure;
+    text-decoration: underline;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+body{
+    display: inline-block;
+    width: 40%;
+    background-color: darkorchid;
+    color: azure;
+    font-family: fantasy;
+    font-size: 20px;
+   
+}
+
+img {
+    width: 500px;
+    height: 400px;
+    display: block;
+    margin: auto;
+}
+
+

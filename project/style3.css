@@ -1,0 +1,19 @@
+form {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+    text-transform: capitalize;
+    font-family: unset;
+    font-size: 30px;
+}
+
+body {
+    background-color: lawngreen;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
