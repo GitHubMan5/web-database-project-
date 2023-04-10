@@ -40,19 +40,46 @@ class User {
     }
 } 
 let Register = document.getElementById("Register").value;
-let li = document.createElement('li');
-li.className = "Register";
-li.appendChild(document.createTextNode("Registration complete"))
-Register.appendChild(li);
+Register.addEventListener('submit', regFunc)
+
+function regFunc(e) {
+  e.preventDefault();
+
+  let fName = document.getElementById('fname').value;
+  let lName = document.getElementById('lname').value;
+  let password = document.getElementById('password').value;
+
+  let user2 = new User(12345, fName, lName, password);
+  console.log(user2)
+
+}
+
+
 let LogIn = document.getElementById("Log In").value;
-let li = document.createElement('li');
-li.className = "Log In";
-li.appendChild(document.createTextNode("Welcome!"))
-LogIn.appendChild(li);
-let Post! = document.getElementById("Post!").value;
-let li = document.createElement('li');
-li.className = "Post!";
-li.appendChild(document.createTextNode("Post Uploaded!"))
-Post.appendChild(li);
+LogIn.addEventListener('submit', regFunc)
+
+function regFunc(e){
+    e.preventDefault();
+
+    let uname = document.getElementById('uname').value;
+    let password = document.getElementById('password').value;
+
+    let user2 = new User(12345, uname, password);
+    console.log(user2)
+}
+
+
+let post = document.getElementById("Post!").value;
+post.addEventListener('submit', regFunc)
+
+function regFunc(e){
+    e.preventDefault();
+
+    let post = document.getElementById('post').value;
+
+    let user2 = new User(12345, post);
+    console.log(user2)
+}
+
 let user1 = new User(12345, "John", "Jones", "passwrd");
 console.log(user1)
