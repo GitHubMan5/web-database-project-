@@ -1,5 +1,4 @@
-letgetBtn = document.getElementById("getUsers")
-if(getBtn) getBtn.addEventListener('click', getAllUsers);
+
 
 function getAllUsers() {
     fetch('http://localhost:3000/users/')
@@ -53,7 +52,7 @@ class User {
 let Register = document.getElementById("Register").value;
 Register.addEventListener('submit', regFunc)
 
-function regFunc(e) {
+async function regFunc(e) {
   e.preventDefault();
 
   let fName = document.getElementById('fname').value;
@@ -69,7 +68,7 @@ function regFunc(e) {
 let LogIn = document.getElementById("Log In").value;
 LogIn.addEventListener('submit', regFunc)
 
-function regFunc(e){
+async function regFunc(e){
     e.preventDefault();
 
     let uname = document.getElementById('uname').value;
@@ -83,7 +82,7 @@ function regFunc(e){
 let post = document.getElementById("Post!").value;
 post.addEventListener('submit', regFunc)
 
-function regFunc(e){
+async function regFunc(e){
     e.preventDefault();
 
     let post = document.getElementById('post').value;
