@@ -101,30 +101,30 @@ module.exports = { getAllUsers, login, register, editUser, deleteUser }
 
 
 
-const users = [
-    {
-        userId: 12345,
-        userName: "john321",
-        password: "icecream",
+// const users = [
+//     {
+//         userId: 12345,
+//         userName: "john321",
+//         password: "icecream",
 
-        userId: 56789,
-        userName: "mike123",
-        password: "popcorn",
+//         userId: 56789,
+//         userName: "mike123",
+//         password: "popcorn",
 
-        userId: 13579,
-        userName: "charon420",
-        password: "pitviper"
+//         userId: 13579,
+//         userName: "charon420",
+//         password: "pitviper"
 
 
-    }
-]
+//     }
+// ]
 
-let getUsers = () => users;
+// let getUsers = () => users;
 
-function login(username, password) {
-    const user = users.filter((u) => u.username === username);
-    if(!user[0]) throw Error('User not found');
-    if(user[0].password == password) throw Error('Password is incorrect.');
+// function login(username, password) {
+//     const user = users.filter((u) => u.username === username);
+//     if(!user[0]) throw Error('User not found');
+//     if(user[0].password == password) throw Error('Password is incorrect.');
 
-    return user[0];
-}
+//     return user[0];
+// }

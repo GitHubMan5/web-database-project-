@@ -1,0 +1,75 @@
+const express = require('express');
+const Post = require("../models/post")
+const router = express.Router();
+
+
+router
+// .post('/posts', (req, res) => {
+//   const postContent = req.body.content;
+//   const hashtags = req.body.hashtags;
+  
+//   res.status(201).json({ message: 'Post created successfully!' });
+// })
+
+
+// .put('/posts/:postId', (req, res) => {
+//   const postId = req.params.postId;
+//   const postContent = req.body.content;
+  
+//   res.json({ message: 'Post edited successfully!' });
+// })
+
+
+// .delete('/posts/:postId', (req, res) => {
+//   const postId = req.params.postId;
+  
+//   res.json({ message: 'Post deleted successfully!' });
+// })
+
+// calling READ function in post model file
+.post('/getPost', async (req, res) => {
+  try {
+    let post = Post.getPost(req.body);
+    res.send(post);
+  } catch(err) {
+    res.status(401).send({message: err.message})
+  }
+
+})
+
+// calling CREATE function in post model file
+.post('/createPost', async (req, res) => {
+  try {
+    let post = Post.createPost(req.body);
+    res.send(post);
+  } catch(err) {
+    res.status(401).send({message: err.message})
+  }
+
+})
+
+// calling UPDATE function in post model file
+
+.post('/updatePost', async (req, res) => {
+  try {
+    let post = Post.updatePost(req.body);
+    res.send(post);
+  } catch(err) {
+    res.status(401).send({message: err.message})
+  }
+
+})
+
+// calling DELETE function in post model file
+
+.post('/deletePost', async (req, res) => {
+  try {
+    let post = Post.deletePost(req.body);
+    res.send(post);
+  } catch(err) {
+    res.status(401).send({message: err.message})
+  }
+
+})
+
+module.exports=router;
